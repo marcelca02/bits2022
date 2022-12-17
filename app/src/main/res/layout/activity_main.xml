@@ -7,14 +7,24 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/quizButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="START GAME"
+        android:text="QUIZ!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/quizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="QUIZ!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
     <Button
         android:id="@+id/exitButton"
@@ -28,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
     <ImageView
-        android:id="@+id/textView"
+        android:id="@+id/titleImage"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:src="@drawable/logo"
