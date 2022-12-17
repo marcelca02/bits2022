@@ -18,24 +18,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initListeners() {
-        Button startButton = findViewById(R.id.startButton);
-        Button exitButton = findViewById(R.id.exitButton);
-        startButton.setOnClickListener(new View.OnClickListener() {
+        Button startBut = findViewById(R.id.quizButton);
+        Button apuntsBut = findViewById(R.id.apuntsButton);
+        Button exitBut = findViewById(R.id.exitButton);
+        startBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 start();
             }
         });
-        exitButton.setOnClickListener(new View.OnClickListener() {
+        apuntsBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+        exitBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeApp();
+            }
+        });
+
 
     }
     private void start() {
         Intent switchActivityIntent = new Intent(this, AppActivity.class);
+        startActivity(switchActivityIntent);
+    }
+
+    private void changeApp() {
+        Intent switchActivityIntent = new Intent(this, InfoActivity.class);
         startActivity(switchActivityIntent);
     }
 
