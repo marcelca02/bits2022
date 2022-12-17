@@ -22,19 +22,21 @@ public class MainActivity extends AppCompatActivity {
         Button exitButton = findViewById(R.id.exitButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 start();
             }
         });
-    }
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
+    }
     private void start() {
         Intent switchActivityIntent = new Intent(this, AppActivity.class);
         startActivity(switchActivityIntent);
-    }
-
-    private void exit() {
-
     }
 
 }
