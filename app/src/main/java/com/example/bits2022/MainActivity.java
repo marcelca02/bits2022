@@ -9,9 +9,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button startGameButton = findViewById(R.id.startGameButton);
-    Button showExplanationsButton = findViewById(R.id.explanationsButton);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,29 +18,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initListeners() {
-        startGameButton.setOnClickListener(new View.OnClickListener() {
+        Button startButton = findViewById(R.id.startButton);
+        Button exitButton = findViewById(R.id.exitButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startGame();
-            }
-        });
-
-        showExplanationsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showExplanations();
+                start();
             }
         });
     }
 
-    private void startGame() {
-        Intent switchActivityIntent = new Intent(this, InGameActivity.class);
+    private void start() {
+        Intent switchActivityIntent = new Intent(this, AppActivity.class);
         startActivity(switchActivityIntent);
     }
 
-    private void showExplanations() {
-        Intent switchActivityIntent = new Intent(this, ExplanationsActivity.class);
-        startActivity(switchActivityIntent);
+    private void exit() {
+
     }
 
 }
