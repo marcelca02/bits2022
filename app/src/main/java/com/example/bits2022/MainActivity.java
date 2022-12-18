@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
     private void start() {
         Intent switchActivityIntent = new Intent(this, AppActivity.class);
